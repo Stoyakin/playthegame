@@ -261,6 +261,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         navigation: {
           nextEl: '.gallery-bottom .swiper-button-next',
           prevEl: '.gallery-bottom .swiper-button-prev',
+        },
+        on: {
+          init: function () {
+            if ( qsAll('.gallery-bottom__item-overimg').length > this.params.slidesPerView )
+              qs('.gallery-bottom').classList.add('swiper-show-nav')
+            else
+              qs('.gallery-bottom').classList.remove('swiper-show-nav')
+          },
         }
       });
 
