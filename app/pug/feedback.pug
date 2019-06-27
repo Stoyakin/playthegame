@@ -1,0 +1,29 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "ОБРАТНАЯ СВЯЗЬ";
+  - var tmpsrc = 'static/img/';
+
+block main
+
+  +b('section').feedback
+    .container
+      +e('h2').title.title ОБРАТНАЯ СВЯЗЬ
+      +e('p').text Заполните форму обратной связи, расположенную ниже, и мы с радостью ответим на Ваше обращение
+      +b('form').form
+        +e.field(style="background-image: url('"+tmpsrc+"field-cover.png');")
+          +e('input')(type="text" data-req="req" placeholder="ФИО").field-input
+        +e.field(style="background-image: url('"+tmpsrc+"field-cover2.png');")
+          +e('input')(type="email" data-req="req" data-type="email" placeholder="E-mail адрес").field-input
+        +e.field(style="background-image: url('"+tmpsrc+"field-cover3.png');")
+          +e('input')(type="text" data-req="req" placeholder="Тема обращения").field-input
+        +e.field(style="background-image: url('"+tmpsrc+"field-cover4.png');")
+          +e('textarea')(data-req="req" placeholder="Ваше сообщение").field-textarea
+        +e.field
+          +b.checkbox
+            +e('input')(type="checkbox" id="agreement" data-req="agreement").input
+            +e('label')(for="agreement").label Настоящим подтверждаю свое согласие на обработку персональных данных, ознакомлен и согласен с условиями 
+              p
+                a(href="#") Политики конфиденциальности Интернет-сайта
+        +e.field
+          +e('button')(type="submit").field-submit Отправить
