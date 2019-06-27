@@ -287,6 +287,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     },
 
+    mainSlider: function mainSlider() {
+      var mSlider = new Swiper('.js-main-slider-init', {
+        speed: 600,
+        spaceBetween: 0,
+          pagination: {
+            el: '.js-main-slider-init .swiper-pagination',
+            type: 'bullets',
+            clickable: 1
+          },
+      });
+    },
+
     init: function init() {
 
       //let elemsAnimArr = ['.js-scroll-anim'];
@@ -297,7 +309,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       if (qs('.js-video')) this.video();
 
+      if (qs('.js-main-slider-init')) this.mainSlider();
+
       let eventResize
+
       try {
         eventResize = new Event('resize')
       } catch (e) {

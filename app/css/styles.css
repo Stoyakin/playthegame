@@ -409,6 +409,9 @@ body.open-menu {
 .swiper-button-next {
   outline: none;
 }
+.main-slider {
+  margin-bottom: 78px;
+}
 .nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -559,4 +562,21 @@ body.open-menu {
   font-size: 23px;
   line-height: 27px;
   font-style: italic;
+}
+.hero-inner {
+  margin-bottom: 20px;
+}
+.hero-inner .container {
+  max-width: 1085px;
+  margin: 0 auto;
+}
+.hero-inner__title {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+.hero-inner__text {
+  font-size: 30px;
+  color: #4e4e4e;
 }

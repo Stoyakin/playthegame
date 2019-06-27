@@ -1,0 +1,56 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Главная";
+  - var tmpsrc = 'static/img/';
+
+block main
+
+  +b('section').main-slider
+    .swiper-container.js-main-slider-init
+      .swiper-wrapper
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_BOY.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_development.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GAME.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GIRL.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_KIDS.png" alt="")
+      .swiper-pagination
+
+  +b('section').hero-inner
+    .container
+      +e('h2').title(style="color: #0290dd") МАЛЬЧИКАМ
+      +e.text
+        p
+          span(style="font-weight: bold; text-transform: uppercase; color: #ff4a8f") Ваш 
+          |хулиган 
+          span(style="font-style: italic; color: #ffa300") не может усидеть на месте 
+          |? Только дай ему волю 
+          span(style="font-style: italic; color: #009900") поозорничать? 
+          | Игрушки 
+          span(style="font-weight: bold; text-transform: uppercase; color: #009900") Play The Game 
+          | направят 
+          span(style="color: #ff1800") энергию 
+          | Вашего непоседы в 
+          span(style="text-transform: uppercase; color: #ff0048") мирное русло 
+          | и сосредоточат внимание на увлекательной игре!  В ассортименте 
+          span(style="text-transform: uppercase; color: #007800") Play The Game 
+          | Вы непременно 
+          span(style="text-transform: uppercase; color: #ff4600") найдётся всё 
+          |, что так нравится мальчикам: 
+          span(style="text-transform: uppercase; color: #ff04bb") железные дороги, 
+          | коллекционные 
+          span(style="text-transform: uppercase; color: #4538fa") машинки 
+          |, игрушечные 
+          span(style="text-transform: uppercase; color: #8230b5") инструменты 
+          |, 
+          span(style="text-transform: uppercase; color: #00e7fc") роботы 
+          |-трансформеры, функциональные 
+          span(style="text-transform: uppercase; color: #ff3434") модели техники 
+          | специального назначения, спортивные игры и развлечения и многое другое!
+
+  +reviews(tmpsrc+'reviews-back-boy.jpg')

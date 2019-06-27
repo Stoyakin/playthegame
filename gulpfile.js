@@ -289,6 +289,7 @@ gulp.task('bsReload', function () {
 gulp.task('watch', gulp.series('browserSync', function () {
   gulp.watch(src.app.pug + '*.pug', gulp.series('setWatch', 'pug'));
   gulp.watch(src.app.stylus + '**/*.styl', gulp.series('stylus'));
+  gulp.watch(src.app.css + 'ext/*.css', gulp.series('css'));
   gulp.watch(src.app.css + 'styles.css', gulp.series('css'));
   //gulp.watch(src.build.css + 'styles.css', gulp.series('csspack'));
   gulp.watch(src.app.js + '**/*.js', gulp.series('js-own'));
