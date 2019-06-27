@@ -53,4 +53,17 @@ block main
           span(style="text-transform: uppercase; color: #ff3434") модели техники 
           | специального назначения, спортивные игры и развлечения и многое другое!
 
+  +b('section').hits
+    .container
+      +e('p').title(style="color: #ff0000") Хиты
+      
+      +products-gallery([
+        {img: tmpsrc+"boy-catalog/5601356_900х900.jpg", title: 'Бензопила'},
+        {img: tmpsrc+"boy-catalog/5601236_900х900.jpg", title: 'Машинка коллекционная'},
+        {img: tmpsrc+"boy-catalog/5601365_900х900.jpg", title: 'АК-47'},
+        {img: tmpsrc+"boy-catalog/5601346_900х900.jpg", title: 'Машинка на радио управлении'}
+      ])
+
   +reviews(tmpsrc+'reviews-back-boy.jpg')
+
+  +gallery-bottom([ tmpsrc+'gallery-img.jpg', tmpsrc+'gallery-img2.jpg', tmpsrc+'gallery-img4.jpg', tmpsrc+'gallery-img5.jpg', tmpsrc+'gallery-img.jpg' ])

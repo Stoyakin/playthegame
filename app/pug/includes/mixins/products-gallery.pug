@@ -1,0 +1,11 @@
+mixin products-gallery(data)
+  +e.slider&attributes(attributes)
+    .swiper-container.js-hits-slider.js-lightgallery
+      .swiper-wrapper
+        each item in data
+          .swiper-slide
+            +e('a').img-cover(href=item.img)
+              +e('img').img(src=item.img, alt="")
+            +e('p').item-title #{item.title}
+      .swiper-button-next
+      .swiper-button-prev
