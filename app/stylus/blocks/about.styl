@@ -1,31 +1,40 @@
 .about
-  margin-bottom 60px
+  margin-bottom 51px
   &:last-child
     margin-bottom 0
   &__title
     color #e04585
-  //&__items
   &__item
     display flex
     align-items center
     justify-content space-between
     &--mirror
       flex-direction row-reverse
+    &:first-child
+      margin-top -76px
+      .about__item-overimg
+        margin-left -11px
+        transform translateY(25px)
     &:nth-child(2)
+      margin-top -94px
       .about__item
         &-overimg
           margin-left 40px
+          margin-right 21px
+          transform translateY(-32px)
         &-content
-          max-width 805px
+          max-width 815px
     &:nth-child(3)
+      margin-top -37px
       .about__item
         &-overimg
           margin-right 40px
+          margin-left 29px
+          transform translateY(-31px)
         &-content
           max-width 715px
     &-overimg
       flex-shrink 0
-    //&-img
     &-content
       font-size 27px
       line-height 32px

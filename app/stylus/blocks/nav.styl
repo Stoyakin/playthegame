@@ -1,10 +1,17 @@
 .nav
+  margin-right 13px
   &__list
     display flex
     flex-wrap wrap
-    margin 0 -22px
+    margin 0 -25px
     &-item
-      margin 0 22px
+      margin 0 25px
+      &:nth-child(odd):hover
+        .nav__list-href-ico
+          transform rotate(10deg)
+      &:nth-child(even):hover
+        .nav__list-href-ico
+          transform rotate(-10deg)
     &-href
       display flex
       flex-direction column
@@ -14,15 +21,16 @@
           opacity .7
       &-overico
         display block
-        width 82px
-        height 80px
+        height 94px
         margin-bottom 5px
         transition opacity .4s
       &-ico
         max-height 100%
+        transition transform .4s ease-in-out
       &-text
         text-align center
         color #fff
         font-size 20px
         line-height 20px
+        margin-top -12px
         text-transform uppercase
