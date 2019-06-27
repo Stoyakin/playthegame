@@ -1,0 +1,62 @@
+.hits
+  .container
+    max-width 1600px
+
+  &__title
+    font-size: 30px
+    font-weight bold
+    text-align: center
+    text-transform: uppercase
+
+  &__img
+    transition: .8s transform, .8s opacity
+    will-change: transform
+    align-self: flex-end
+
+  &__item-title
+    font-size 25px
+    line-height 32px
+    color: #585252
+    text-align: center
+    transition: .8s visibility, .8s opacity
+    visibility: hidden
+    opacity: 0
+
+  &__img-cover
+    display flex
+    margin-bottom 45px
+
+  &__slider
+    .swiper-button-next
+      right 27%
+      left auto
+      top 26%
+
+    .swiper-button-prev
+      left: 28%
+      top: 26%
+
+    .swiper-slide
+      padding-top 43px
+      padding-bottom 80px
+      pointer-events none
+
+      &-active
+        pointer-events auto
+
+        .hits__img
+          transform: scale(1.2) translateY(0)
+          opacity: 1
+
+        .hits__item-title
+          visibility: visible
+          opacity: 1
+
+      &-prev
+        .hits__img
+          transform: scale(0.7) translateY(-29%) translateX(-20%)
+          opacity: .5
+      &-next
+        .hits__img
+          transform: scale(0.7) translateY(-29%) translateX(20%)
+          opacity: .5

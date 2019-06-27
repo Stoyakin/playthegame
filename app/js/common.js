@@ -322,10 +322,29 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     },
 
-    mainLightGallery: function mainLightGallery() {
-      lightGallery(qs('.js-lightgallery'), {
-        selector: 'a'
+    hitsSlider: function hitsSlider() {
+      const self = this;
+      var hitsSlider = new Swiper('.js-hits-slider', {
+        speed: 750,
+        spaceBetween: 30,
+        slidesPerView: 3,
+        centeredSlides: 1,
+        loop: 1,
+        navigation: {
+          nextEl: '.js-hits-slider .swiper-button-next',
+          prevEl: '.js-hits-slider .swiper-button-prev',
+        }
       });
+    },
+
+    mainLightGallery: function mainLightGallery() {
+      qsAll('.js-lightgallery').forEach(function (item) {
+        lightGallery(item, {
+          selector: 'a',
+          counter: 0,
+          download: 0
+        });
+      })
     },
 
     init: function init() {
@@ -342,9 +361,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       if (qs('.js-main-slider-init')) this.mainSlider();
 
+      if (qs('.js-hits-slider')) this.hitsSlider();
+
       if (qs('.js-lightgallery')) this.mainLightGallery();
 
-      let eventResize
+      let eventResize;
 
       try {
         eventResize = new Event('resize')
