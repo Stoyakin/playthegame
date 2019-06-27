@@ -1,0 +1,90 @@
+extends includes/template/base.pug
+
+block variables
+  - var bodyClass = 'index'
+  - var title = "Главная";
+  - var tmpsrc = 'static/img/';
+
+block main
+
+  +b('section').about
+    .container
+      +e('h2').title.title О нас
+      +e.items
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"about-img.png" alt="").item-img
+          +e.item-content
+            .wis-content
+              p 
+                span(style="color: #e04585;") Play the Game
+                |  - ваш 
+                span(style="color: #0ba504;") проводник в мир веселого
+                |  детства с более чем 10-ти летней историей. Многие годы мы 
+                span(style="color: #e07f01;") 
+                  i радуем
+                |  наших маленьких непосед и исследователей 
+                span(style="color: #e07f01;") 
+                  i разнообразными играми
+                |  и игрушками, которые 
+                span(style="color: #02c3ca; text-transform: uppercase;") помогают развивать воображение
+                |  и познавать мир!
+
+        +e.item.--mirror
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"about-img2.png" alt="").item-img
+          +e.item-content
+            .wis-content
+              p 
+                span(style="color: #f71268; text-transform: uppercase;") 
+                  b Наша цель
+                |   - ежедневно радовать детей, вовлекая их в приключения и веселье, ведь игрушки Play The Game созданы специально для того, чтобы играть в них, а не беречь на полке.
+
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"about-img3.png" alt="").item-img
+          +e.item-content
+            .wis-content
+              p 
+                span(style="color: #f50b26; text-transform: uppercase;") Широкий ассортимент игрушек
+                |  для детей всех возрастов постоянно обновляется и пополняется: здесь Вы найдете 
+                span(style="color: #06b8eb;") развивающие наборы
+                |  и конструкторы для самых маленьких, 
+                span(style="color: #ce0beb; text-transform: uppercase;") увлекательные ролевые игры, 
+                span(style="color: #00d14f;") 
+                  b тематические игрушки
+                |  для девочек и мальчиков, веселые и объединяющие 
+                span(style="color: #d99003; text-transform: uppercase;") настольные игры
+                |  для всей семьи и многое-многое другое!
+
+  +b('section').pluses
+    .container
+      +e('h2').title.title наши преимущества
+      +e.items
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"pluses-img.jpg" alt="").item-img
+          +e.item-bottom
+            +e('p').item-title Ассортимент 
+            +e('p').item-text Play The Game – это неиссякаемый источник новых и актуальных игрушек для детей любых возрастов!
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"pluses-img2.jpg" alt="").item-img
+          +e.item-bottom
+            +e('p').item-title доступность 
+            +e('p').item-text Мы убеждены, что интересные и яркие игрушки могут быть недорогими!
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"pluses-img3.jpg" alt="").item-img
+          +e.item-bottom
+            +e('p').item-title доверие 
+            +e('p').item-text Более 10 лет мы радуем детей и их родителей оригинальным ассортиментом и уникальным ценовым предложением!
+
+  +b('section').video
+    .container
+      +e.over
+        +e('video')(poster="static/video/poster.jpg").item.js-video
+          source(src="static/video/video.mp4" type="video/mp4")
+
+  +reviews(tmpsrc+'reviews-back.jpg')
+  

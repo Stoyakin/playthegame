@@ -1,0 +1,30 @@
+block variables
+
+include ../bemto/bemto.pug
+include ../__mixins.pug
+
+doctype html
+html(lang="ru")
+  block head
+    include ../partials/head
+
+  body(class=bodyClass ? bodyClass : '')
+    .wrapper
+      block header
+        include ../partials/header
+
+      main.main
+        .main__content
+          block main
+
+      block footer
+        include ../partials/footer
+
+    block hiddens
+      .hidden-block
+        include ../__popups
+        .sprite(style="display: none;")
+          include ../../../svg/sprite.svg
+        
+    block scripts
+      include ../partials/scripts

@@ -1,0 +1,35 @@
+.pluses
+  margin-bottom 50px
+  &:last-child
+    margin-bottom 0
+  &__title
+    color #005eb8
+    margin-bottom 72px
+  &__items
+    display flex
+    flex-wrap wrap
+    width calc(100% + 50px)
+    margin 0 -25px
+  &__item
+    width calc(100%/3 - 50px)
+    margin 0 25px
+    &-overimg
+      display flex
+      justify-content center
+      height 275px
+      margin-bottom 60px
+    &-img
+      max-height 100%
+      align-items center
+    //&-bottom
+    &-title
+      text-align center
+      margin-bottom 10px
+      color #1a8200
+      font-size 30px
+      line-height 36px
+      text-transform uppercase
+    &-text
+      color $default
+      font-size 27px
+      font-weight 400

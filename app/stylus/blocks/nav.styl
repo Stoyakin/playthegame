@@ -1,0 +1,28 @@
+.nav
+  &__list
+    display flex
+    flex-wrap wrap
+    margin 0 -22px
+    &-item
+      margin 0 22px
+    &-href
+      display flex
+      flex-direction column
+      align-items center
+      &:hover
+        .nav__list-href-overico
+          opacity .7
+      &-overico
+        display block
+        width 82px
+        height 80px
+        margin-bottom 5px
+        transition opacity .4s
+      &-ico
+        max-height 100%
+      &-text
+        text-align center
+        color #fff
+        font-size 20px
+        line-height 20px
+        text-transform uppercase

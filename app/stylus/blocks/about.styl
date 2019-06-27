@@ -1,0 +1,32 @@
+.about
+  margin-bottom 60px
+  &:last-child
+    margin-bottom 0
+  &__title
+    color #e04585
+  //&__items
+  &__item
+    display flex
+    align-items center
+    justify-content space-between
+    &--mirror
+      flex-direction row-reverse
+    &:nth-child(2)
+      .about__item
+        &-overimg
+          margin-left 40px
+        &-content
+          max-width 805px
+    &:nth-child(3)
+      .about__item
+        &-overimg
+          margin-right 40px
+        &-content
+          max-width 715px
+    &-overimg
+      flex-shrink 0
+    //&-img
+    &-content
+      font-size 27px
+      line-height 32px
+      color #4e4e4d
