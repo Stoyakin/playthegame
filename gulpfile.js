@@ -239,6 +239,7 @@ gulp.task('css', css([
     src.app.css + 'fonts.css',
     src.app.css + 'ext/swiper-cut-svg.css',
     'node_modules/plyr/dist/plyr.css',
+    'node_modules/lightgallery.js/dist/css/lightgallery.css',
     src.app.css + 'styles.css'
   ],
   src.build.css
@@ -251,9 +252,10 @@ gulp.task('csspack', csspack([src.build.css + 'styles.css'], src.build.css));
 gulp.task('js-own', js([src.app.js + 'common.js'], src.build.js, 'own.js'));
 
 gulp.task('js-vendor', jsVendor([
-    'node_modules/swiper/dist/js/swiper.js',
     'node_modules/plyr/dist/plyr.polyfilled.js',
     'node_modules/plyr/dist/plyr.js',
+    'node_modules/swiper/dist/js/swiper.js',
+    'node_modules/lightgallery.js/dist/js/lightgallery.js',
   ],
   src.build.js,
   'vendor.js'

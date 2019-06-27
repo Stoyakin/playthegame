@@ -251,6 +251,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     },
 
+    galleryBottom: function galleryBottom() {
+
+      var galleryBottom = new Swiper('.js-gallery-bottom-swiper', {
+        loop: false,
+        speed: 700,
+        slidesPerView: 5,
+        spaceBetween: 23,
+        navigation: {
+          nextEl: '.gallery-bottom .swiper-button-next',
+          prevEl: '.gallery-bottom .swiper-button-prev',
+        }
+      });
+
+    },
+
     anim: function () {
 
       let elemsAnimArr = ['.js-scroll-anim'];
@@ -296,6 +311,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
             type: 'bullets',
             clickable: 1
           },
+        });
+    },
+
+    mainLightGallery: function mainLightGallery() {
+      lightGallery(qs('.js-lightgallery'), {
+        selector: 'a'
       });
     },
 
@@ -307,9 +328,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       if (qs('.js-reviews-swiper')) this.reviewsSwiper();
 
+      if (qs('.js-gallery-bottom-swiper')) this.galleryBottom();
+
       if (qs('.js-video')) this.video();
 
       if (qs('.js-main-slider-init')) this.mainSlider();
+
+      if (qs('.js-lightgallery')) this.mainLightGallery();
 
       let eventResize
 

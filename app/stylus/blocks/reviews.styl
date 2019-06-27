@@ -1,9 +1,15 @@
 .reviews
   padding 40px 0
+  margin-bottom 29px
   background-repeat no-repeat
   background-position center bottom
   background-size cover
-  &__content
+  &:last-child
+    margin-bottom 0
+  &__title
+    color #fff
+    margin-bottom 52px
+  &__wrap
     position relative
     max-width 700px
     margin 0 auto
@@ -19,4 +25,7 @@
       font-size 23px
       line-height 27px
       font-style italic
-
+  .swiper
+    &-button
+      &-prev, &-next
+        margin-top -38px
