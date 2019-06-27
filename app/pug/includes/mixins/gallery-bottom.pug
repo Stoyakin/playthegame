@@ -1,0 +1,11 @@
+mixin gallery-bottom(data)
+  +b('section').gallery-bottom&attributes(attributes)
+    .container
+      .swiper-container.js-gallery-bottom-swiper.js-lightgallery
+        .swiper-wrapper
+          each item in data
+            .swiper-slide
+              +e('a')(href=item).item-overimg
+                +e('img')(src=item alt="").item-img
+      button(type="button").swiper-button-prev
+      button(type="button").swiper-button-next

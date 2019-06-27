@@ -1,0 +1,33 @@
+.gallery-bottom
+  .container
+    position relative
+  &__item
+    &-overimg
+      display block
+      position relative
+      width 100%
+      padding-top 100%
+      overflow hidden
+      &:before
+        @extend .before
+        left 0
+        top 0
+        width 100%
+        height 100%
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAulBMVEUAAADz8/PFxcXOzs7b29v5+fnJycn5+fnp6en////39/fi4uLW1tb19fXb29vS0tL9/f3y8vLS0tLMzMzJycnf39/j4+PExMTOzs7FxcXl5eX9/f3n5+f7+/vMzMzT09PX19fu7u7X19fX19fu7u7X19f////19fXr6+v9/f3r6+vT09Pu7u7Q0NDMzMz8/PzQ0NDMzMzp6enFxcX4+PjT09PJycn19fXy8vLu7u7j4+Pf39/b29vX19cpLcjBAAAAL3RSTlMAQEBQEL+/r4BwYEAQ7+/v39/Pz5+PgIBgYFBAQBDv38+/v6+fn4BwcGBgYDAwMPiP5f8AAADDSURBVBjTbcrnDoIwFIbhwxAF9wCU4d4LrCD7/m/LLmpIfH/0fHlSYLn6UXeh0WUUkEb6j/x2UNfya2xHUdQyJINebkaS9CW6pH6SnBiO0xQb0zQd03HPsg3U7bOMfjgjdBXoINQht4OQJ9DjaOV5V2A3zy16i8IUaBaFQ65algOVmzooS7YPVbXu0dXbVtUO2BzG8UrBQ5nEuBvTxzDETULenOlz+mJNl+TlCspM07SZAvKHJEOzxRtnwx8VP0WyLcMXJgsaB7W93V0AAAAASUVORK5CYII=') no-repeat center rgba(0,0,0,.65)
+        opacity 0
+        transition opacity .4s
+        z-index 1
+      &:hover
+        &:before
+          opacity 1
+    &-img
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      object-fit cover
+  .swiper
+    &-slide
+      max-width 303px

@@ -1,14 +1,16 @@
 mixin reviews(background)
   - var background = background ? background : 'static/img/reviews-back.jpg'
   +b('section')(style="background-image: url('"+background+"');").reviews
-    +e.content
-      .swiper-container.js-reviews-swiper
-        .swiper-wrapper
-          - for (var i = 0; i < 3; i++) {
-            .swiper-slide
-              +e.item
-                +e('p').item-author Калинкина М. #{i+1}
-                +e('p').item-text «Спешу поделиться с вами впечатлением от игрушки-головоломки Play The Game. Она заменила многие игрушки в нашем доме! Ребёнок играет с удовольствием и совсем не скучает, а цена вопроса не превышает 199 рублей!! Фантастика!» 
-          - }
-      button(type="button").swiper-button-prev
-      button(type="button").swiper-button-next
+    .container
+      +e('h2').title.title Нам доверяют
+      +e.wrap
+        .swiper-container.js-reviews-swiper
+          .swiper-wrapper
+            - for (var i = 0; i < 3; i++) {
+              .swiper-slide
+                +e.item
+                  +e('p').item-author Калинкина М. #{i+1}
+                  +e('p').item-text «Спешу поделиться с вами впечатлением от игрушки-головоломки Play The Game. Она заменила многие игрушки в нашем доме! Ребёнок играет с удовольствием и совсем не скучает, а цена вопроса не превышает 199 рублей!! Фантастика!» 
+            - }
+        button(type="button").swiper-button-prev
+        button(type="button").swiper-button-next
