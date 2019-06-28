@@ -368,6 +368,19 @@ body.open-menu {
 body.open-menu .header {
   position: static;
 }
+body.page-loaded .wrapper,
+body.page-loaded .header,
+body.page-loaded .main,
+body.page-loaded .footer {
+  opacity: 1;
+}
+.wrapper,
+.header,
+.main,
+.footer {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
 .wrapper {
   min-height: 100vh;
   overflow-x: hidden;
