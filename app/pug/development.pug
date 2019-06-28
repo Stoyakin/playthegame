@@ -1,0 +1,69 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Развитие и обучение";
+  - var tmpsrc = 'static/img/';
+
+block main
+
+  +b('section').main-slider
+    .swiper-container.js-main-slider-init
+      .swiper-wrapper
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_development.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_BOY.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GAME.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GIRL.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_KIDS.png" alt="")
+      .swiper-pagination
+
+  +b('section').hero-inner
+    .container
+      +e('h2').title(style="color: #00a4f4") РАЗВИТИЕ И ОБУЧЕНИЕ
+      +e.text
+        p
+          | Подобно взрослым, дети
+          span(style="text-transform: uppercase; color: #ff0606;") формируют
+          | свои интересы и
+          span(style="color: #00ae00;") выбирают
+          | именно те игры, которые близки им на данном этапе развития. Благодаря
+          span(style="font-style: italic; color: #4f3eec;") широкому
+          |, постоянно обновляющемуся
+          span(style="color: #ff00d1;") ассортименту
+          span(style="text-transform: uppercase; color: #ff00d1;") Play The Game
+          |, вы непременно найдете то, что 
+          span(style="color: #00ae00;") увлечет Вашего ребенка
+          |! В категории «развитие и обучение» представлено множество 
+          span(style="font-style: italic; color: #a8a600;") увлекательных
+          span(style="text-transform: uppercase; color: #00b3e0;") конструкторов
+          | и
+          span(style="text-transform: uppercase; color: #a932b9;") игровых наборов
+          |, которые познакомят детей с
+          span(style="text-transform: uppercase; color: #007aaa;") законами физики
+          |,
+          span(style="text-transform: uppercase; color: #f60707;") разовьют память
+          |,
+          span(style="font-style: italic; color: #008700;") логику
+          |и
+          span(style="font-style: italic; color: #0024d5;") воображение
+          |, развлекут и обучат одновременно! 
+
+  +b('section').hits
+    .container
+      +e('p').title(style="color: #ff0000") Хиты
+      
+      +products-gallery([
+        {img: tmpsrc+"development/5604038_900x900.jpg", title: 'Название 1'},
+        {img: tmpsrc+"development/5604047_900x900.jpg", title: 'Название 2'},
+        {img: tmpsrc+"development/5608269_900x900.jpg", title: 'Название 3'},
+        {img: tmpsrc+"development/5610078_900x900.jpg", title: 'Название 4'}
+      ])
+
+  +reviews(tmpsrc+'reviews-back-boy.jpg')
+
+  +gallery-bottom([ tmpsrc+'gallery-img.jpg', tmpsrc+'gallery-img2.jpg', tmpsrc+'gallery-img4.jpg', tmpsrc+'gallery-img5.jpg', tmpsrc+'gallery-img.jpg' ])
+

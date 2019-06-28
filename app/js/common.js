@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     mainSlider: function mainSlider() {
       var mSlider = new Swiper('.js-main-slider-init', {
-        speed: 600,
+        speed: 1000,
         spaceBetween: 0,
         pagination: {
           el: '.js-main-slider-init .swiper-pagination',
@@ -340,12 +340,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
       var hitsSlider = new Swiper('.js-hits-slider', {
         speed: 750,
         spaceBetween: 30,
-        slidesPerView: 3,
         centeredSlides: 1,
+        slidesPerView: 3,
         loop: 1,
         navigation: {
           nextEl: '.js-hits-slider .swiper-button-next',
           prevEl: '.js-hits-slider .swiper-button-prev',
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 1
+          }
         }
       });
     },
