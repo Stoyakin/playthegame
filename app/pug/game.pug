@@ -1,0 +1,59 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Настольные игры";
+  - var tmpsrc = 'static/img/';
+
+block main
+
+  +b('section').main-slider
+    .swiper-container.js-main-slider-init
+      .swiper-wrapper
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GAME.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_BOY.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_development.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GIRL.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_KIDS.png" alt="")
+      .swiper-pagination
+
+  +b('section').hero-inner
+    .container
+      +e('h2').title(style="color: #00a4f4") настольные игры
+      +e.text
+        p Любите проводить время в кругу семьи с 
+          span(style="text-transform: uppercase; color: #f60f0f;") пользой 
+          | и 
+          span(style="text-transform: uppercase; font-style: italic; color: #007be9;") интересом 
+          | ? Доверьте свой досуг н 
+          span(style="font-style: italic; color: #ff6200;") играм Play The Game 
+          | ! Вас ждут 
+          span(style="color: #007600;") увлекательные 
+          | приключения и 
+          span(style="font-style: italic; color: #e021dc;") загадки 
+          |, 
+          span(style="text-transform: uppercase; color: #0014dd;") захватывающие 
+          span(style="text-transform: uppercase; color: #e19f00;") сражения 
+          | с препятствиями, для решения которых потребуются ловкость, меткость и смекалка!
+
+  +b('section').hits
+    .container
+      +e('p').title(style="color: #2f44f5") Хиты
+      
+      +products-gallery([
+        {img: tmpsrc+"game/5608215_900x900.jpg", title: 'Название 1'},
+        {img: tmpsrc+"game/5608338_900x900.jpg", title: 'Название 2'},
+        {img: tmpsrc+"game/5611041_900x900.jpg", title: 'Название 3'},
+        {img: tmpsrc+"game/5611046_1_900x900.jpg", title: 'Название 4'},
+        {img: tmpsrc+"game/5611046_2_900x900.jpg", title: 'Название 5'},
+        {img: tmpsrc+"game/5611046_3_900x900.jpg", title: 'Название 6'}
+      ])
+
+  +reviews(tmpsrc+'reviews-back-boy.jpg')
+
+  +gallery-bottom([ tmpsrc+'gallery-img.jpg', tmpsrc+'gallery-img2.jpg', tmpsrc+'gallery-img4.jpg', tmpsrc+'gallery-img5.jpg', tmpsrc+'gallery-img.jpg' ])
+

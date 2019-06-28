@@ -1,55 +1,124 @@
-include includes/bemto/bemto.pug
-include includes/__mixins
+extends includes/template/base.pug
 
-doctype html
-html(lang="ru")
-  - var title = "Разводящая"
-  include includes/partials/head
-  style(type='text/css').
-    .page-list {
-      display: inline-block;
-      vertical-align: top;
-      width: 48%;
-      margin: 30px 0 0 !important;
-    }
-    .page-list-item {
-      margin: 0 0 10px !important;
-    }
-    .page-list-item:before {
-      display: none;
-      content: none;
-    }
-    .page-list-item a {
-      color: #1c1c1c;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 400;
-      border-bottom: 1px solid #1c1c1c;
-      transition: color 0.5s, border 0.5s;
-      -webkit-transition: color 0.5s, border 0.5s;
-    }
-    .page-list-item a:hover {
-      border-bottom-color: transparent;
-    }
-    h3 {
-      margin-bottom: 20px; 
-    }
-    
-  body
-    .wrapper(style="overflow-x: hidden; padding-top: 80px;")
-      main.main(style="background: none;")
-        .container
-          .text
-            ul.page-list(style="display:inline-block;vertical-align:top;width:45%;margin-right:35px;")
-              li.page-list-item
-                h3 Страницы
-                a(target="_blank" href="main.html").link Главная
-              li.page-list-item
-                a(target="_blank" href="boy.html").link Мальчикам
-                
-      .hidden-block
-        include includes/__popups
+block variables
+  - var bodyClass = 'index'
+  - var title = "Главная";
+  - var tmpsrc = 'static/img/';
 
-      script(src="static/js/vendor.js")
-      script(src="static/js/own.js")
-      
+block main
+
+  +b('section').tile
+    +e.row
+      +e.col
+        +e.item.--middle(style="background-image: url('"+tmpsrc+"tile-img.jpg')")
+          +e.item-back(style="background-color: #64D21B")
+          +e.item-content
+            +e('p').item-text Настольные <br>игры
+            +e('a')(href="#").item-more Подробнее
+
+        +e.item.--min(style="background-image: url('"+tmpsrc+"tile-img2.jpg')")
+          +e.item-back(style="background-color: #00ABFF")
+          +e.item-content
+            +e('p').item-text Для <br>мальчиков
+            +e('a')(href="#").item-more Подробнее
+      +e.col
+        +e.item.--min(style="background-image: url('"+tmpsrc+"tile-img3.jpg')")
+          +e.item-back(style="background-color: #A799FF")
+          +e.item-content
+            +e('p').item-text Развитие <br>и обучение
+            +e('a')(href="#").item-more Подробнее
+
+        +e.item.--middle(style="background-image: url('"+tmpsrc+"tile-img4.jpg')")
+          +e.item-back(style="background-color: #F7A000")
+          +e.item-content
+            +e('p').item-text Для <br>малышей
+            +e('a')(href="#").item-more Подробнее
+      +e.col
+        +e.item(style="background-image: url('"+tmpsrc+"tile-img5.jpg')")
+          +e.item-back(style="background-color: #FF64B5")
+          +e.item-content
+            +e('p').item-text Для <br>девочек
+            +e('a')(href="#").item-more Подробнее
+
+  +b('section').about
+    .container
+      +e('h2').title.title О нас
+      +e.items
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"about-img.png" alt="").item-img
+          +e.item-content
+            .wis-content
+              p 
+                span(style="color: #e04585;") Play the Game
+                |  - ваш 
+                span(style="color: #0ba504;") проводник в мир веселого
+                |  детства с более чем 10-ти летней историей. Многие годы мы 
+                span(style="color: #e07f01;") 
+                  i радуем
+                |  наших маленьких непосед и исследователей 
+                span(style="color: #e07f01;") 
+                  i разнообразными играми
+                |  и игрушками, которые 
+                span(style="color: #02c3ca; text-transform: uppercase;") помогают развивать воображение
+                |  и познавать мир!
+
+        +e.item.--mirror
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"about-img2.png" alt="").item-img
+          +e.item-content
+            .wis-content
+              p 
+                span(style="color: #f71268; text-transform: uppercase;") 
+                  b Наша цель
+                |   - ежедневно радовать детей, вовлекая их в приключения и веселье, ведь игрушки Play The Game созданы специально для того, чтобы играть в них, а не беречь на полке.
+
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"about-img3.png" alt="").item-img
+          +e.item-content
+            .wis-content
+              p 
+                span(style="color: #f50b26; text-transform: uppercase;") Широкий ассортимент игрушек
+                |  для детей всех возрастов постоянно обновляется и пополняется: здесь Вы найдете 
+                span(style="color: #06b8eb;") развивающие наборы
+                |  и конструкторы для самых маленьких, 
+                span(style="color: #ce0beb; text-transform: uppercase;") увлекательные ролевые игры, 
+                span(style="color: #00d14f;") 
+                  b тематические игрушки
+                |  для девочек и мальчиков, веселые и объединяющие 
+                span(style="color: #d99003; text-transform: uppercase;") настольные игры
+                |  для всей семьи и многое-многое другое!
+
+  +b('section').pluses
+    .container
+      +e('h2').title.title наши преимущества
+      +e.items
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"pluses-img.jpg" alt="").item-img
+          +e.item-bottom
+            +e('p').item-title Ассортимент 
+            +e('p').item-text Play The Game – это неиссякаемый источник новых и актуальных игрушек для детей любых возрастов!
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"pluses-img2.jpg" alt="").item-img
+          +e.item-bottom
+            +e('p').item-title доступность 
+            +e('p').item-text Мы убеждены, что интересные и яркие игрушки могут быть недорогими!
+        +e.item
+          +e.item-overimg
+            +e('img')(src=tmpsrc+"pluses-img3.jpg" alt="").item-img
+          +e.item-bottom
+            +e('p').item-title доверие 
+            +e('p').item-text Более 10 лет мы радуем детей и их родителей оригинальным ассортиментом и уникальным ценовым предложением!
+
+  +b('section').video
+    .container
+      +e.over
+        +e('video')(poster="static/video/poster.jpg").item.js-video
+          source(src="static/video/video.mp4" type="video/mp4")
+
+  +reviews(tmpsrc+'reviews-back.jpg')
+
+  +gallery-bottom([ tmpsrc+'gallery-img.jpg', tmpsrc+'gallery-img2.jpg', tmpsrc+'gallery-img4.jpg', tmpsrc+'gallery-img5.jpg', tmpsrc+'gallery-img.jpg' ])

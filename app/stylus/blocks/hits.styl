@@ -12,6 +12,7 @@
     transition: .8s transform, .8s opacity
     will-change: transform
     align-self: flex-end
+    max-width 100%
 
   &__item-title
     font-size 25px
@@ -45,7 +46,7 @@
         pointer-events auto
 
         .hits__img
-          transform: scale(1.2) translateY(0)
+          transform: scale(1.05) translateY(0)
           opacity: 1
 
         .hits__item-title
@@ -54,11 +55,11 @@
 
       &-prev
         .hits__img
-          transform: scale(0.7) translateY(-29%) translateX(-20%)
+          transform: scale(0.6) translateY(-29%) translateX(-20%)
           opacity: .5
       &-next
         .hits__img
-          transform: scale(0.7) translateY(-29%) translateX(20%)
+          transform: scale(0.6) translateY(-29%) translateX(20%)
           opacity: .5
 
 @media (max-width: 767px)

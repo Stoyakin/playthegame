@@ -302,7 +302,7 @@ gulp.task('js', gulp.series('js-vendor', 'js-own'));
 gulp.task('css-build', gulp.series('stylus', 'css', 'csspack' ));
 gulp.task('pug-build', gulp.series('setWatch', 'pug'));
 
-gulp.task('build', gulp.parallel(/*clean,*/ gulp.series('setWatch', 'pug'), gulp.series('stylus', 'css', /*'csspack'*/ ), 'js'));
+gulp.task('build', gulp.parallel(clean, gulp.series('setWatch', 'pug'), gulp.series('stylus', 'css', /*'csspack'*/ ), 'js'));
 
 // Дефолтный таск
 gulp.task('default', gulp.series('build', 'browserSync'));

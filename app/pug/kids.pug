@@ -1,0 +1,60 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Малышам";
+  - var tmpsrc = 'static/img/';
+
+block main
+
+  +b('section').main-slider
+    .swiper-container.js-main-slider-init
+      .swiper-wrapper
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_KIDS.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_BOY.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_development.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GAME.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GIRL.png" alt="")
+      .swiper-pagination
+
+  +b('section').hero-inner
+    .container
+      +e('h2').title(style="color: #ff008c") малышам
+      +e.text
+        p 
+          span(style="text-transform: uppercase; color: #00b100") Познание мира 
+          | через игру является неотъемлемой частью 
+          span(style="text-transform: uppercase; font-style: italic; color: #a85afc") развития 
+          | каждого малыша. Благодаря игрушкам 
+          span(style="color: #ff0000;") Play The Game
+          |, Вы не только вовлечете ребенка в игровой процесс, но и 
+          span(style="font-style:italic; color: #007fcd;") создадите 
+          | положительную среду для его новых 
+          span(style="color: #ffa000;") навыков
+          |. Из учета особенностей наших 
+          span(style="text-transform: uppercase; color: #eb4646;") самых маленьких 
+          | клиентов, в ассортименте Play The Game представлены  
+          span(style="font-weight: bold; font-style: italic; color: #f63df0;") игрушки
+          |, направленные на 
+          span(style="text-transform: uppercase; color: #00b800") знакомство с формами
+          |, цветами и звуками, а также на развитие мелкой моторик и 
+          span(style="text-transform: uppercase; color: #0036d9") логического мышления.
+
+  +b('section').hits
+    .container
+      +e('p').title(style="color: #00aa07") Хиты
+
+      +products-gallery([
+        {img: tmpsrc+"kids/5601320_900х900.jpg", title: 'Название 1'},
+        {img: tmpsrc+"kids/5608047_900х900.jpg", title: 'Название 2'},
+        {img: tmpsrc+"kids/5608268_900х900.jpg", title: 'Название 3'},
+        {img: tmpsrc+"kids/5610076_900х900.jpg", title: 'Название 4'}
+      ])
+
+  +reviews(tmpsrc+'reviews-back-kids.jpg')
+
+  +gallery-bottom([ tmpsrc+'kids/gallery-img.jpg', tmpsrc+'kids/gallery-img2.jpg', tmpsrc+'kids/gallery-img4.jpg', tmpsrc+'kids/gallery-img5.jpg', tmpsrc+'kids/gallery-img.jpg' ])

@@ -221,11 +221,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (!selector)
         return;
       let element,
-        op = 0.1,
-        typeBlock = getComputedStyle(element).display;
+        op = 0.1;
       (typeof selector === 'string' || selector instanceof String) ? element = qs(selector): element = selector;
       element.style.opacity = 0;
-      element.style.display = typeBlock;
+      element.style.display = 'block';
       let timer = setInterval(function () {
         if (op >= 1) {
           clearInterval(timer);
@@ -249,7 +248,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         navigation: {
           nextEl: '.reviews .swiper-button-next',
           prevEl: '.reviews .swiper-button-prev',
-        }
+        },
+        pagination: {
+          el: '.reviews .swiper-pagination',
+          type: 'bullets',
+          clickable: 1
+        },
       });
 
     },
@@ -271,6 +275,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
           clickable: 1
         },
         breakpoints: {
+          375: {
+            slidesPerView: 1
+          },
+          667: {
+            slidesPerView: 2
+          },
           992: {
             slidesPerView: 3
           },
@@ -339,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       const self = this;
       var hitsSlider = new Swiper('.js-hits-slider', {
         speed: 750,
-        spaceBetween: 30,
+        spaceBetween: 0,
         centeredSlides: 1,
         slidesPerView: 3,
         loop: 1,
@@ -365,11 +375,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
       })
     },
 
+    burger: function burger() {
+      const _self = this,
+        navWrap = qs('.nav');
+      qs('.js-burger').addEventListener('click', function (e) {
+        if (this.classList.contains('active')) {
+          this.classList.remove('active');
+          qs('body').classList.remove('open-menu');
+          _self.fadeOut(navWrap, 300);
+        } else {
+          this.classList.add('active');
+          qs('body').classList.add('open-menu');
+          _self.fadeIn(navWrap, 300);
+        }
+        e.preventDefault();
+      });
+    },
+
     init: function init() {
 
       //let elemsAnimArr = ['.js-scroll-anim'];
 
       //if (elemsAnimArr.length) this.anim();
+
+      if (qs('.js-burger')) this.burger();
 
       if (qs('.js-reviews-swiper')) this.reviewsSwiper();
 

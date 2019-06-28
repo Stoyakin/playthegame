@@ -6,34 +6,57 @@
     height 79vh
   @media $tPortraitMax
     height 600px
+  @media $mLandscapeMax
+    height auto
   &__row
     display flex
     justify-content space-between
     height 100%
+    @media $mLandscapeMax
+      flex-wrap wrap
   &__col
     &:first-child
       width calc(100%/3 + 59px)
       @media $tPortraitMax
         width calc(100%/3 - 6px)
+      @media $mLandscapeMax
+        width 100%
       .tile__item
         &--middle
           height calc(50% + 18.5px)
+          @media $mLandscapeMax
+            min-height 150px
+            height auto
         &--min
           height calc(50% - 27.5px)
+          @media $mLandscapeMax
+            min-height 150px
+            height auto
     &:nth-child(2)
       width calc(100%/3 - 41px)
       margin 0 9px
       @media $tPortraitMax
         width calc(100%/3 - 6px)
+      @media $mLandscapeMax
+        width 100%
+        margin 0
       .tile__item
         &--middle
           height calc(50% + 49.5px)
+          @media $mLandscapeMax
+            min-height 150px
+            height auto
         &--min
           height calc(50% - 58.5px)
+          @media $mLandscapeMax
+            min-height 150px
+            height auto
     &:nth-child(3)
       width calc(100%/3 - 25px)
       @media $tPortraitMax
         width calc(100%/3 - 6px)
+      @media $mLandscapeMax
+        width 100%
   &__item
     display flex
     justify-content center
@@ -46,6 +69,13 @@
     background-position 50% 50%
     overflow hidden
     z-index 1
+    @media $mLandscapeMax
+      padding 35px
+      margin-bottom 0
+      min-height 170px
+    @media $mPortraitMax
+      padding 20px
+      min-height 150px
     &:hover
       .tile__item
         &-back
@@ -85,6 +115,12 @@
       @media $desktopToTouch
         font-size 32px
         line-height 36px
+      @media $mLandscapeMax
+        br
+          display none
+      @media $mPortraitMax
+        font-size 24px
+        line-height 30px
     &-more
       display inline-block
       vertical-align top
@@ -101,8 +137,8 @@
       @media $desktopToTouch
         height 48px
         font-size 22px
-        line-height 22px
-        padding 7px 20px
+        line-height 42px
+        padding 0 20px
       &:hover
         background-color rgba(#fff, .15)
     &-text, &-more

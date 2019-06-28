@@ -17,6 +17,8 @@
       margin-bottom 40px
       &:last-child
         margin-bottom 0
+    @media $mLandscapeMax
+      flex-wrap wrap
     &--mirror
       flex-direction row-reverse
       @media $tPortraitMax
@@ -75,9 +77,15 @@
         margin-left 0
         img
           max-width 100%
+      @media $mLandscapeMax
+        width 140px
+        margin-right 35px
     &-content
       font-size 27px
       line-height 32px
       color #4e4e4d
       @media $desktopMax
         width calc(100% - 240px)
+      @media $mLandscapeMax
+        width 100%
+        margin-top 15px

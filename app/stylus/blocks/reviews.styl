@@ -4,6 +4,8 @@
   background-repeat no-repeat
   background-position center bottom
   background-size cover
+  @media $mLandscapeMax
+    text-align center
   &:last-child
     margin-bottom 0
   &__title
@@ -14,10 +16,17 @@
     max-width 700px
     margin 0 auto
     padding 0 70px
+    @media $mLandscapeMax
+      padding 0
   &__item
     padding 58px 50px 140px
-    // background url('../../../../static/img/review-decor.png') no-repeat center top
-    // background-size 100% 100%
+    @media $mLandscapeMax
+      text-align left
+      padding-bottom 150px
+    @media $mPortraitMax
+      padding-top 45px
+      padding-left 25px
+      padding-right 25px
     &-author
       margin-bottom 8px
     &-author, &-text
@@ -29,6 +38,7 @@
     &-container
       background url('../../../../static/img/bottom.png') no-repeat center bottom
       background-size 100% 247px
+      max-width 560px
       &:before
         @extend .before
         left 0
@@ -48,3 +58,17 @@
     &-button
       &-prev, &-next
         margin-top -44px
+        @media $mLandscapeMax
+          display none
+    &-pagination
+      display none
+      bottom 108px
+      width 100%
+      text-align center
+      &-bullet
+        margin 0 4px
+        border-color #005EBC
+        &-active
+          background-color #005EBC
+      @media $mLandscapeMax
+        display block

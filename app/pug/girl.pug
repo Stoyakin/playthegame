@@ -1,0 +1,66 @@
+extends includes/template/base.pug
+
+block variables
+  - var title = "Девочкам";
+  - var tmpsrc = 'static/img/';
+
+block main
+
+  +b('section').main-slider
+    .swiper-container.js-main-slider-init
+      .swiper-wrapper
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GIRL.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_BOY.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_development.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GAME.png" alt="")
+        +e.slide.swiper-slide
+          +e('img').img(src=tmpsrc+"PlaytheGame_banner_KIDS.png" alt="")
+      .swiper-pagination
+
+  +b('section').hero-inner
+    .container
+      +e('h2').title(style="color: #ff008c") Девочкам
+      +e.text
+        p 
+          | Думаете, 
+          span(style="color: #ff0606; font-style: italic;") чем порадовать 
+          | Ваше сокровище? 
+          span(style="color: #0097f8; font-weight: bold; font-style: italic;") Play The Game 
+          | точно 
+          span(style="text-transform: uppercase; color: #00ad00;") знает
+          |, что нужно Вашей 
+          span(style="font-weight: bold; color: #ff00e0;") маленькой леди 
+          |! В нашем ассортименте непременно найдется всё, что так дорого сердцу каждой маленькой девочки! Реалистичные 
+          span(style="text-transform: uppercase; color: #ff6c00;") пупсы
+          |, одежда и коляски для увлекательных 
+          span(style="font-weight: bold; font-style: italic; color: #ff0001;") игр в дочки-матери
+          |, наборы игрушечной посуды и кухонной бытовой техники, чтобы помогать маме по хозяйству! И конечно, 
+          span(style="text-transform: uppercase; color: #b301da;") большой выбор 
+          | кукол, сказочных фей и русалок, которые 
+          span(style="text-transform: uppercase; color: #00a99b;") вдохновят 
+          | и побудят воплощать в игре самые 
+          span(style="color: #00e100; font-style: italic; font-weight: bold;") заветные мечты 
+          | и фантазии!
+
+  +b('section').hits
+    .container
+      +e('p').title(style="color: #ff008c") Хиты
+
+      +products-gallery([
+        {img: tmpsrc+"girls/5602083_900х900.jpg", title: 'Название 1'},
+        {img: tmpsrc+"girls/5602123_кофеварка_900х900.jpg", title: 'Название 2'},
+        {img: tmpsrc+"girls/5602123_микроволновка_900х900.jpg", title: 'Название 3'},
+        {img: tmpsrc+"girls/5602123_миксер_900х900.jpg", title: 'Название 4'},
+        {img: tmpsrc+"girls/5602123_пылесос_900х900.jpg", title: 'Название 5'},
+        {img: tmpsrc+"girls/5602123_стиральная машина_900х900.jpg", title: 'Название 6'},
+        {img: tmpsrc+"girls/5602124_900х900.jpg", title: 'Название 7'},
+        {img: tmpsrc+"girls/5602127_900x900.jpg", title: 'Название 8'}
+      ])
+
+  +reviews(tmpsrc+'reviews-back-girl.jpg')
+
+  +gallery-bottom([ tmpsrc+'gallery-img.jpg', tmpsrc+'gallery-img2.jpg', tmpsrc+'gallery-img4.jpg', tmpsrc+'gallery-img5.jpg', tmpsrc+'gallery-img.jpg' ])
