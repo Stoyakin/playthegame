@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
               qs('.gallery-bottom').classList.add('swiper-show-nav')
             else
               qs('.gallery-bottom').classList.remove('swiper-show-nav')
-          },
+          }
         }
       });
 

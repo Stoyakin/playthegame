@@ -10,15 +10,25 @@ block main
     .swiper-container.js-main-slider-init
       .swiper-wrapper
         +e.slide.swiper-slide
-          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GIRL.png" alt="")
+          picture.img
+            source(srcset=tmpsrc+"PlaytheGame_banner_GIRL.png" alt="" media="(min-width: 768px)")
+            img(src=tmpsrc+"adapt4.jpg" alt="")
         +e.slide.swiper-slide
-          +e('img').img(src=tmpsrc+"PlaytheGame_banner_BOY.png" alt="")
+          picture.img
+            source(srcset=tmpsrc+"PlaytheGame_banner_GAME.png" alt="" media="(min-width: 768px)")
+            img(src=tmpsrc+"adapt3.jpg" alt="")
         +e.slide.swiper-slide
-          +e('img').img(src=tmpsrc+"PlaytheGame_banner_development.png" alt="")
+          picture.img
+            source(srcset=tmpsrc+"PlaytheGame_banner_development.png" alt="" media="(min-width: 768px)")
+            img(src=tmpsrc+"adapt2.jpg" alt="")
         +e.slide.swiper-slide
-          +e('img').img(src=tmpsrc+"PlaytheGame_banner_GAME.png" alt="")
+          picture.img
+            source(srcset=tmpsrc+"PlaytheGame_banner_BOY.png" alt="" media="(min-width: 768px)")
+            img(src=tmpsrc+"adapt.jpg" alt="")
         +e.slide.swiper-slide
-          +e('img').img(src=tmpsrc+"PlaytheGame_banner_KIDS.png" alt="")
+          picture.img
+            source(srcset=tmpsrc+"PlaytheGame_banner_KIDS.png" alt="" media="(min-width: 768px)")
+            img(src=tmpsrc+"adapt5.jpg" alt="")
       .swiper-pagination
 
   +b('section').hero-inner
@@ -63,4 +73,4 @@ block main
 
   +reviews(tmpsrc+'reviews-back-girl.jpg')
 
-  +gallery-bottom([ tmpsrc+'gallery-img.jpg', tmpsrc+'gallery-img2.jpg', tmpsrc+'gallery-img4.jpg', tmpsrc+'gallery-img5.jpg', tmpsrc+'gallery-img.jpg' ])
+  +gallery-bottom([ tmpsrc+'girls/gallery-img.jpg', tmpsrc+'girls/gallery-img2.jpg', tmpsrc+'girls/gallery-img3.jpg', tmpsrc+'girls/gallery-img4.jpg', tmpsrc+'girls/gallery-img5.jpg' ])
