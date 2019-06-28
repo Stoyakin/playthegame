@@ -5,6 +5,10 @@
     flex-wrap wrap
     justify-content space-between
     align-items center
+    @media (max-width: 540px)
+      flex-direction column
+      align-items center
+      text-align center
   &__coopy, &__href
     color #4e4e4d
     line-height 18px
@@ -14,5 +18,10 @@
     text-align right
     align-self flex-end
     transition color .4s
+    @media (max-width: 540px)
+      align-self center
+      margin-top 15px
+      &:first-child
+        margin-top 0
     &:hover
       color #000

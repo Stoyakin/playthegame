@@ -1,17 +1,33 @@
 .form
   .checkbox
     margin-top 60px
+    @media $mLandscapeMax
+      margin-top 30px
   &__field
     width 100%
     position relative
     z-index 1
     & + .form__field
       margin-top 69px
+      @media $mLandscapeMax
+        margin-top 55px
     &:last-child
       margin-top 45px
     &.error
       .form__field-decor:before
         opacity 1
+      @media $mLandscapeMax
+        .form__field
+          &-input, &-textarea
+            color #C20314
+            &::-webkit-input-placeholder
+              color #C20314
+            &::-moz-placeholder
+              color #C20314
+            &:-ms-input-placeholder
+              color #C20314
+            &:-moz-placeholder
+              color #C20314
     &-decor
       position absolute
       left 2px
@@ -31,6 +47,9 @@
         background-position left top
         opacity 0
         transition opacity .4s
+        @media $mLandscapeMax
+          display none
+          content none
     &:last-child
       margin-bottom 0
     &-input, &-textarea
@@ -42,19 +61,26 @@
       border none
       outline none
       background none
+      transition color .4s
     &-input
       height 50px
       line-height 50px
       padding 0 37px
+      @media $mLandscapeMax
+        padding 0 20px
       & + .form__field-decor
         height 89px
         &:before
           left 7px
           background-image url('../../../../static/img/field-eror.png')
+          background-size calc(100% - 5px) 100%
     &-textarea
       height 205px
       padding 33px 39px 45px
       line-height 33px
+      @media $mLandscapeMax
+        padding-left 20px
+        padding-right 20px
       & + .form__field-decor
         top -15px
         left -10px
@@ -63,6 +89,7 @@
         &:before
           left 20px
           background-image url('../../../../static/img/field-eror2.png')
+          background-size calc(100% - 20px) 100%
     &-submit
       width 202px
       height 65px
