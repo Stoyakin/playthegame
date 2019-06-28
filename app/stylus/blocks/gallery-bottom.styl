@@ -4,6 +4,8 @@
     max-width 1680px
     padding 0 40px
     margin 0 auto
+    @media $desktopToTouch
+      padding 0 25px
   &__item
     &-overimg
       display block
@@ -34,6 +36,19 @@
   .swiper
     &-slide
       max-width 303px
+    &-pagination
+      display none
+      position relative
+      width 100%
+      margin-top 20px
+      text-align center
+      &-bullet
+        margin 0 4px
+        border-color #005EBC
+        &-active
+          background-color #005EBC
+      @media $tPortraitMax
+        display block
     &-button
       &-prev, &-next
         display none
@@ -45,3 +60,5 @@
       .swiper-button
         &-prev, &-next
           display block
+          @media $desktopMax
+            display none

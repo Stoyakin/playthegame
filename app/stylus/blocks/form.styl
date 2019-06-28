@@ -1,0 +1,83 @@
+.form
+  .checkbox
+    margin-top 60px
+  &__field
+    width 100%
+    position relative
+    z-index 1
+    & + .form__field
+      margin-top 69px
+    &:last-child
+      margin-top 45px
+    &.error
+      .form__field-decor:before
+        opacity 1
+    &-decor
+      position absolute
+      left 2px
+      top -11px
+      width 100%
+      background-repeat no-repeat
+      background-position left top
+      background-size 100% 100%
+      z-index -1
+      &:before
+        @extend .before
+        display block
+        top 0
+        width 100%
+        height 100%
+        background-repeat no-repeat
+        background-position left top
+        opacity 0
+        transition opacity .4s
+    &:last-child
+      margin-bottom 0
+    &-input, &-textarea
+      display block
+      width 100%
+      color #575353
+      font-family Calibri
+      font-size 25px
+      border none
+      outline none
+      background none
+    &-input
+      height 50px
+      line-height 50px
+      padding 0 37px
+      & + .form__field-decor
+        height 89px
+        &:before
+          left 7px
+          background-image url('../../../../static/img/field-eror.png')
+    &-textarea
+      height 205px
+      padding 33px 39px 45px
+      line-height 33px
+      & + .form__field-decor
+        top -15px
+        left -10px
+        width calc(100% + 10px)
+        height 282px
+        &:before
+          left 20px
+          background-image url('../../../../static/img/field-eror2.png')
+    &-submit
+      width 202px
+      height 65px
+      color white
+      font-family Calibri
+      font-size 20px
+      font-weight 400
+      line-height 20px
+      text-transform uppercase
+      padding 15px
+      background-color rgba(0,108,177, 1)
+      text-align center
+      outline none
+      border none
+      user-select none
+      transition background .4s
+      &:hover
+        background-color rgba(0,108,177, .7)

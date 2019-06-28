@@ -243,6 +243,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         loop: true,
         speed: 700,
         effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
         navigation: {
           nextEl: '.reviews .swiper-button-next',
           prevEl: '.reviews .swiper-button-prev',
@@ -261,6 +264,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
         navigation: {
           nextEl: '.gallery-bottom .swiper-button-next',
           prevEl: '.gallery-bottom .swiper-button-prev',
+        },
+        pagination: {
+          el: '.gallery-bottom .swiper-pagination',
+          type: 'bullets',
+          clickable: 1
+        },
+        breakpoints: {
+          992: {
+            slidesPerView: 3
+          },
         },
         on: {
           init: function () {
@@ -314,12 +327,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
       var mSlider = new Swiper('.js-main-slider-init', {
         speed: 600,
         spaceBetween: 0,
-          pagination: {
-            el: '.js-main-slider-init .swiper-pagination',
-            type: 'bullets',
-            clickable: 1
-          },
-        });
+        pagination: {
+          el: '.js-main-slider-init .swiper-pagination',
+          type: 'bullets',
+          clickable: 1
+        },
+      });
     },
 
     hitsSlider: function hitsSlider() {

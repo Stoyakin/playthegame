@@ -4,38 +4,80 @@
     margin-bottom 0
   &__title
     color #e04585
+    @media $tPortraitMax
+      margin-bottom 50px
   &__item
     display flex
     align-items center
     justify-content space-between
+    min-height 300px
+    @media $tPortraitMax
+      min-height auto
+      align-items flex-start
+      margin-bottom 40px
+      &:last-child
+        margin-bottom 0
     &--mirror
       flex-direction row-reverse
+      @media $tPortraitMax
+        flex-direction row
     &:first-child
       margin-top -76px
+      @media $tPortraitMax
+        margin-top 0
       .about__item-overimg
         margin-left -11px
         transform translateY(25px)
+        @media $tPortraitMax
+          margin-left 0
+          transform translateY(0)
+      @media $desktopMax
+        margin-left 0
     &:nth-child(2)
       margin-top -94px
+      @media $desktopMax
+        margin-top -30px
+      @media $tPortraitMax
+        margin-top 0
       .about__item
         &-overimg
           margin-left 40px
           margin-right 21px
           transform translateY(-32px)
+          @media $desktopMax
+            margin-right 0
+          @media $tPortraitMax
+            margin-right 40px
+            margin-left 0
+            transform translateY(0)
         &-content
           max-width 815px
     &:nth-child(3)
       margin-top -37px
+      @media $desktopMax
+        margin-top 0
       .about__item
         &-overimg
           margin-right 40px
           margin-left 29px
           transform translateY(-31px)
+          @media $tPortraitMax
+            margin-right 40px
+            margin-left 0
+            transform translateY(0)
         &-content
           max-width 715px
     &-overimg
       flex-shrink 0
+      @media $tPortraitMax
+        max-width 200px
+        margin-right 40px
+        margin-left 0
+        img
+          max-width 100%
     &-content
       font-size 27px
       line-height 32px
       color #4e4e4d
+      @media $desktopMax
+        width calc(100% - 240px)

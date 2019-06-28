@@ -1,0 +1,50 @@
+.checkbox
+  display inline-block
+  vertical-align top
+  position relative
+  text-align center
+  &__input
+    position absolute
+    left 0
+    top 0
+    opacity 0
+    &:checked ~ label .checkbox__item-ico:before
+      opacity 1
+    &.error ~ label .checkbox__item-ico
+      background-color #C20314
+  &__label
+    display block
+    position relative
+    font-family Calibri
+    font-size 25px
+    line-height 32px
+    color #575353
+    cursor pointer
+    a
+      color #3e6dc8
+      border-bottom 1px solid #3e6dc8
+      transition border .4s
+      &:hover
+        border-bottom-color transparent
+  &__item-ico
+    position relative
+    display inline-block
+    vertical-align top
+    margin-top 2px
+    margin-right 5px
+    border-radius 5px
+    width 29px
+    height 28px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAcCAMAAACqEUSYAAAA9lBMVEUAAAAaFhoaFhqGhI6QkZwcFxwaFhoaFhogGyEeGR8bFxsiHiSfoKsbFhufoKufoKseGyAbFhtsbHSBgYuNjZifoKsaFhoaFhqfoKsaFhoaFhqfoKs8O0AeGh9TUlobGByFg42MjJcaFhqPkJoaFhoaFhqfoKsaFhpubHSfoKsaFhqfoKsaFhqfoKufoKsbGBwaFhoaFhohHCIaFhwdGB0gHCEaFhonIigmIScaFhqLjJVycXmCg4xTUFiXmKKQkJsxLjQqJisaFhoeGyAaFhoaFhoeGR4aFhqfoKufoKtNTFJiYWmfoKsaFhowLTMrKCyfoKufoKskDVokAAAAUnRSTlMAELGfmKOgwLummb2RkVkbyresoH9lMi4oIRIJyb67p5yOiYWFc3BrZ2JiUlBHHhwWBuLVxMK/vqupm5mXlpWPiH95b1tGPTo3NTMwLykmJCMTwggi9AAAAOFJREFUKM+108dSw0AURNEejd6zPUgCSSg6YpyzyTnnzP//DCpWLBi5ylW+27PpTQOiq4hZ2bYiI+tYtdqDbotdtzkF5rsVr/f6kURR+D4TQqRJeH83GEUzJJxidGi94f8e22ieO9CU1mGffkHXAcgv63BeQElClyigaK5K981yjm4sUCypBqq5WrzM1a1c3V5e1zZXotNM9ZtfDBz53zrtEa49R4OxZ+OzYnWGTj8Igr4zHD/Fk/WsSfw87li1W+CqZloX5omUsnHWkH/yd0IAD6q652YfqTMzUek3ImK+wQ+lQhSq4D6PWgAAAABJRU5ErkJggg==') no-repeat center
+    transition background .4s
+    &:before
+      content ''
+      display block
+      position absolute
+      left 0
+      top 0
+      width 29px
+      height 28px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAcCAMAAACqEUSYAAABpFBMVEUgKTMeKzgAAAAZNUkdJSscHiUbGB0bO1MaGiAcHiUaFhscGSAaFhocWIMbTG4XMEIZMEIkQlUcJC8dIioiMTwaGR8fLDkaGR4aGiAbGiEaFx0aFx0bGB8bFx0aFhobGB4rZ44aX5AYRGMWHykqXX0aIi4dJjEXMEMeSWgaOE4aQl8nT2cbM0UdRmUkPEojN0YdHyYgJzEiNEMjR14gKjUcGR8gJzMeISsbGyElS2EeKDMfKTQcHCQbGSAaFhoeIy0bFxslQlcbGSAaFhoeGSAaFhoAktMEldUMkNIAmNYCkNEPis8JjdAFk9QSi88Am9kAmdcRjdALic4HiM0FjM8HhswRhMoPis0AlNQPhswAntsdcLIWYZYdbq4cbK4UX5QXba8Pk88Ihs0Yj8sOg8gYdLoTks4VhsoQhcgfhsIYe8Ebeb4sdq0qcqcSZ6YucaUaZ6EZZJwaZJklZpUYXZAJltEMkM8EhcobiskKgsgdi8USgMUkgLongrkfc7cXcbUlebQqerAca6oUaKkYaqcobqIvcJ8cXowTWYgoW34XUnsiSWEtjLPwAAAARnRSTlPJwADm1Jcw5rWPQSMX+PLv6s/OxcS9r6+glHZeT0k5Ev36+fjz8/Hu6urp5+Hg3tDMy8rFxMG7tamop56cfHt1bmdXMxoM8ZTmOQAAAX1JREFUKM910+VWAlEUBeDjqKBgdwF2d3dLSw2MEoMgDUrb3fXSngHBxcDsv986N/ZdFwiiYmtpprZ2YroBAKZKMJBOEY+Avcb+n6/E22Pg8lwmkykUCp1Oq9V6nU7nWQMBbaO0US6XYvYPs4yxWCzjFdDc5VcqkVHZPCKGSVqvZrHuj3s7oORer/5nRrPc2Q71tIaL3zcBohpjmqVsPikHiKm4+G4VZuMqTWHWXjdDkU2VYTmLvWWo5iyzWnEx6jvgYFcjKmVIsZ7VCuocqttgUBXkAK585CZxGDmvldtF1CuSg59amNlj0sBwXiunpaiUiYMjjJrMJjLF7NIi5TBvozLMvja+QlOSosymgoz7rnzecLA8UQob3x4qw7ml+T9aQdT9EqSoCzMenMwpzWetWgdJTTjs8ISCIc+Dw+GwY2grE9r+3LcDRFN19UBNMRM+nz88WFWZjEVf45VjQz3LBPNTJEKhkMfjiQUCgWi7va11oa6uvmWtY5cgfgGuHt7oPwnMGQAAAABJRU5ErkJggg==') no-repeat center
+      opacity 0
+      transition opacity .4s

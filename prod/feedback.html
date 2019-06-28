@@ -24,11 +24,11 @@
               </li>
               <li class="nav__list-item"><a class="nav__list-href" href="#"><span class="nav__list-href-overico"><img class="nav__list-href-ico" src="static/img/nav-ico3.png" alt="" role="presentation"/></span><span class="nav__list-href-text">для <br>девочек</span></a>
               </li>
-              <li class="nav__list-item"><a class="nav__list-href" href="#"><span class="nav__list-href-overico"><img class="nav__list-href-ico" src="static/img/nav-ico4.png" alt="" role="presentation"/></span><span class="nav__list-href-text">для <br>мальчиков</span></a>
+              <li class="nav__list-item"><a class="nav__list-href" href="boy.html"><span class="nav__list-href-overico"><img class="nav__list-href-ico" src="static/img/nav-ico4.png" alt="" role="presentation"/></span><span class="nav__list-href-text">для <br>мальчиков</span></a>
               </li>
               <li class="nav__list-item"><a class="nav__list-href" href="#"><span class="nav__list-href-overico"><img class="nav__list-href-ico" src="static/img/nav-ico5.png" alt="" role="presentation"/></span><span class="nav__list-href-text">для <br>малышей</span></a>
               </li>
-              <li class="nav__list-item"><a class="nav__list-href" href="#"><span class="nav__list-href-overico"><img class="nav__list-href-ico" src="static/img/nav-ico6.png" alt="" role="presentation"/></span><span class="nav__list-href-text">Свяжитесь <br>с нами</span></a>
+              <li class="nav__list-item"><a class="nav__list-href" href="feedback.html"><span class="nav__list-href-overico"><img class="nav__list-href-ico" src="static/img/nav-ico6.png" alt="" role="presentation"/></span><span class="nav__list-href-text">Свяжитесь <br>с нами</span></a>
               </li>
             </ul>
           </nav>
@@ -40,31 +40,41 @@
         <div class="main__content">
           <section class="feedback">
             <div class="container">
-              <h2 class="feedback__title title">ОБРАТНАЯ СВЯЗЬ
-              </h2>
-              <p class="feedback__text">Заполните форму обратной связи, расположенную ниже, и мы с радостью ответим на Ваше обращение
-              </p>
-              <form class="form">
-                <div class="form__field" style="background-image: url('static/img/field-cover.png');"><input class="form__field-input" type="text" data-req="req" placeholder="ФИО"/>
-                </div>
-                <div class="form__field" style="background-image: url('static/img/field-cover2.png');"><input class="form__field-input" type="email" data-req="req" data-type="email" placeholder="E-mail адрес"/>
-                </div>
-                <div class="form__field" style="background-image: url('static/img/field-cover3.png');"><input class="form__field-input" type="text" data-req="req" placeholder="Тема обращения"/>
-                </div>
-                <div class="form__field" style="background-image: url('static/img/field-cover4.png');"><textarea class="form__field-textarea" data-req="req" placeholder="Ваше сообщение"></textarea>
-                </div>
-                <div class="form__field">
-                  <div class="checkbox"><input class="checkbox__input" type="checkbox" id="agreement" data-req="agreement"/>
-                    <label class="checkbox__label" for="agreement">Настоящим подтверждаю свое согласие на обработку персональных данных, ознакомлен и согласен с условиями 
-                      <p><a href="#">Политики конфиденциальности Интернет-сайта</a></p>
-                    </label>
+              <div class="feedback__content">
+                <h2 class="feedback__title title">ОБРАТНАЯ СВЯЗЬ
+                </h2>
+                <p class="feedback__text">Заполните форму обратной связи, расположенную ниже, и мы с радостью ответим на Ваше обращение
+                </p>
+                <form class="form form--feedback" novalidate="novalidate">
+                  <div class="form__field"><input class="form__field-input" type="text" data-req="req" placeholder="ФИО"/>
+                    <div class="form__field-decor" style="background-image: url('static/img/field-cover.png');">
+                    </div>
                   </div>
-                </div>
-                <div class="form__field">
-                  <button class="form__field-submit" type="submit">Отправить
-                  </button>
-                </div>
-              </form>
+                  <div class="form__field"><input class="form__field-input" type="email" data-req="req" data-type="email" placeholder="E-mail адрес"/>
+                    <div class="form__field-decor" style="background-image: url('static/img/field-cover2.png');">
+                    </div>
+                  </div>
+                  <div class="form__field"><input class="form__field-input" type="text" data-req="req" placeholder="Тема обращения"/>
+                    <div class="form__field-decor" style="background-image: url('static/img/field-cover3.png');">
+                    </div>
+                  </div>
+                  <div class="form__field"><textarea class="form__field-textarea" data-req="req" placeholder="Ваше сообщение"></textarea>
+                    <div class="form__field-decor" style="background-image: url('static/img/field-cover4.png');">
+                    </div>
+                  </div>
+                  <div class="form__field">
+                    <div class="checkbox"><input class="checkbox__input" type="checkbox" id="agreement" data-req="agreement"/>
+                      <label class="checkbox__label" for="agreement"> <span class="checkbox__item-ico"></span>Настоящим подтверждаю свое согласие на обработку персональных данных, ознакомлен и согласен с условиями 
+                        <p><a href="#">Политики конфиденциальности Интернет-сайта</a></p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__field">
+                    <button class="form__field-submit" type="submit">Отправить
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </section>
         </div>

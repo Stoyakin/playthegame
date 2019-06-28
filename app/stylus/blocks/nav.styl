@@ -1,11 +1,31 @@
 .nav
   margin-right 13px
+  @media $tPortraitMax
+    position fixed
+    display none
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background-color #005ebc
+    padding 80px 25px
+    overflow-y auto
+    z-index 10
   &__list
     display flex
     flex-wrap wrap
     margin 0 -25px
+    @media $tPortraitMax
+      margin 0
+      flex-direction column
+      max-width 300px
+      margin 0 auto
     &-item
       margin 0 25px
+      @media $desktopToTouch
+        margin 0 18px
+      @media $tPortraitMax
+        margin 0 0 20px
       &:nth-child(odd):hover
         .nav__list-href-ico
           transform rotate(10deg)
@@ -16,6 +36,10 @@
       display flex
       flex-direction column
       align-items center
+      @media $tPortraitMax
+        display inline-flex
+        flex-direction row
+        align-items center
       &:hover
         .nav__list-href-overico
           opacity .7
@@ -24,6 +48,11 @@
         height 94px
         margin-bottom 5px
         transition opacity .4s
+        @media $desktopToTouch
+          width 65px
+          height 65px
+        @media $tPortraitMax
+          margin-right 20px
       &-ico
         max-height 100%
         transition transform .4s ease-in-out
@@ -34,3 +63,11 @@
         line-height 20px
         margin-top -12px
         text-transform uppercase
+        @media $desktopToTouch
+          margin-top 0
+          font-size 18px
+        @media $tPortraitMax
+          text-align left
+          font-size 20px
+          br
+            display none

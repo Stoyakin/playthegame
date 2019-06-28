@@ -2,6 +2,10 @@
   margin-bottom 66px
   height 88vh
   min-height 600px
+  @media $desktopToTouch
+    height 79vh
+  @media $tPortraitMax
+    height 600px
   &__row
     display flex
     justify-content space-between
@@ -9,6 +13,8 @@
   &__col
     &:first-child
       width calc(100%/3 + 59px)
+      @media $tPortraitMax
+        width calc(100%/3 - 6px)
       .tile__item
         &--middle
           height calc(50% + 18.5px)
@@ -17,6 +23,8 @@
     &:nth-child(2)
       width calc(100%/3 - 41px)
       margin 0 9px
+      @media $tPortraitMax
+        width calc(100%/3 - 6px)
       .tile__item
         &--middle
           height calc(50% + 49.5px)
@@ -24,6 +32,8 @@
           height calc(50% - 58.5px)
     &:nth-child(3)
       width calc(100%/3 - 25px)
+      @media $tPortraitMax
+        width calc(100%/3 - 6px)
   &__item
     display flex
     justify-content center
@@ -55,14 +65,13 @@
       top 0
       width 100%
       height 100%
-      /*opacity .85*/
       opacity 0
       transition opacity .4s ease-in-out
       z-index -1
+      @media $desktopToTouch
+        opacity .85
     &-content
       text-align center
-    &-text, &-more
-      opacity 0
     &-text
       color #fff
       font-size 40px
@@ -73,6 +82,9 @@
       text-transform uppercase
       transform translateY(-40px)
       transition transform .4s ease-in-out, opacity .4s ease-in-out
+      @media $desktopToTouch
+        font-size 32px
+        line-height 36px
     &-more
       display inline-block
       vertical-align top
@@ -86,5 +98,15 @@
       padding 12px 20px
       transform translateY(40px)
       transition background .4s, transform .4s ease-in-out, opacity .4s ease-in-out
+      @media $desktopToTouch
+        height 48px
+        font-size 22px
+        line-height 22px
+        padding 7px 20px
       &:hover
         background-color rgba(#fff, .15)
+    &-text, &-more
+      opacity 0
+      @media $desktopToTouch
+        transform translateY(0)
+        opacity 1
