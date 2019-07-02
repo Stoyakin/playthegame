@@ -1,0 +1,50 @@
+.popup
+  position fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  background-color: #ffffff
+  z-index: 100
+  padding-left: 51px
+  padding-right: 51px
+  padding-top: 44px
+  padding-bottom: 50px
+  max-width: 620px
+  width: 100%
+  display none
+
+  &.show
+    display block
+
+
+  &__close
+    border: none
+    position: absolute
+    right: 31px
+    top: 31px
+    width: 14px
+    height: 14px
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%3Cpath%20d%3D%22M13.3%200.710017C13.1131%200.522765%2012.8595%200.417532%2012.595%200.417532C12.3305%200.417532%2012.0768%200.522765%2011.89%200.710017L6.99997%205.59002L2.10997%200.700017C1.92314%200.512765%201.66949%200.407532%201.40497%200.407532C1.14045%200.407532%200.886802%200.512765%200.699971%200.700017C0.309971%201.09002%200.309971%201.72002%200.699971%202.11002L5.58997%207.00002L0.699971%2011.89C0.309971%2012.28%200.309971%2012.91%200.699971%2013.3C1.08997%2013.69%201.71997%2013.69%202.10997%2013.3L6.99997%208.41002L11.89%2013.3C12.28%2013.69%2012.91%2013.69%2013.3%2013.3C13.69%2012.91%2013.69%2012.28%2013.3%2011.89L8.40997%207.00002L13.3%202.11002C13.68%201.73002%2013.68%201.09002%2013.3%200.710017Z%22%20fill%3D%22black%22%20fill-opacity%3D%220.34%22%2F%3E%0D%0A%3C%2Fsvg%3E')
+    outline: none
+    cursor: pointer
+    background-color: transparent
+
+  &__title
+    text-align: center
+    color: #4e4e4d
+    font-size: 30px
+    line-height: 36px
+    font-weight: 700
+    letter-spacing: 0.03em
+    margin-bottom 20px
+    text-transform: uppercase
+
+  &__text
+    color: #4e4e4d
+    font-size: 27px
+    line-height: 32px
+    text-align: center
+
+@media (max-width: 767px)
+  .popup
+    padding: 50px 20px

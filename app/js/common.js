@@ -16,6 +16,18 @@ function getParent(el, findParent) {
   return false;
 }
 
+function toggleClass(selector, newclass) {
+  if (selector.classList) {
+    selector.classList.toggle(newclass);
+  } else {
+    var classes = selector.className.split(' ');
+    var existingIndex = classes.indexOf(newclass);
+    if (existingIndex >= 0) classes.splice(existingIndex, 1);
+    else classes.push(newclass);
+    selector.className = classes.join(' ');
+  }
+}
+
 const resetForm = (itemForm) => {
   ['error', 'no-empty'].forEach(item => qsAll(`.${item}`, itemForm).forEach(elem => elem.classList.remove(item)));
   itemForm.reset();
@@ -28,6 +40,10 @@ if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) qs('body').classList.add('i
 document.addEventListener("DOMContentLoaded", function (event) {
 
   window.site = {};
+
+  window.site.popupsOpener = function popupsOpener(form) {
+    document.querySelector(form).classList.add('show')
+  };
 
   window.site.form = ({
 
@@ -131,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }).init()
 
   window.site.obj = {
-
     slideUp: function slideUp(selector, duration, cb = null) {
       if (!selector)
         return;
@@ -337,6 +352,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       var mSlider = new Swiper('.js-main-slider-init', {
         speed: 1000,
         spaceBetween: 0,
+        autoplay: {
+          delay: 3000,
+        },
         pagination: {
           el: '.js-main-slider-init .swiper-pagination',
           type: 'bullets',
@@ -392,11 +410,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     },
 
+    popupsCloser: function popupsCloser() {
+      qsAll('.js-close-popup').forEach(function (item) {
+        item.addEventListener('click', function () {
+          event.preventDefault();;
+          toggleClass(document.querySelector('.popup.show'), 'show');
+        });
+      })
+    },
+
     init: function init() {
-
-      //let elemsAnimArr = ['.js-scroll-anim'];
-
-      //if (elemsAnimArr.length) this.anim();
 
       if (qs('.js-burger')) this.burger();
 
@@ -411,6 +434,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (qs('.js-hits-slider')) this.hitsSlider();
 
       if (qs('.js-lightgallery')) this.mainLightGallery();
+
+      if (qs('.js-close-popup')) this.popupsCloser();
 
       let eventResize;
 
