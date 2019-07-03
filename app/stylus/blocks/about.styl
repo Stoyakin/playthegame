@@ -6,6 +6,9 @@
     color #e04585
     @media $tPortraitMax
       margin-bottom 50px
+    @media $tPortraitMax
+      font-size 26px
+      line-height 30px
   &__item
     display flex
     align-items center
@@ -31,7 +34,7 @@
         margin-left -11px
         transform translateY(25px)
         @media $tPortraitMax
-          margin-left 0
+          margin: 0 auto
           transform translateY(0)
       @media $desktopMax
         margin-left 0
@@ -50,8 +53,8 @@
             margin-right 0
           @media $tPortraitMax
             margin-right 40px
-            margin-left 0
             transform translateY(0)
+            margin: 0 auto
         &-content
           max-width 815px
     &:nth-child(3)
@@ -67,6 +70,7 @@
             margin-right 40px
             margin-left 0
             transform translateY(0)
+            margin: 0 auto
         &-content
           max-width 715px
     &-overimg
@@ -84,6 +88,10 @@
       font-size 27px
       line-height 32px
       color #4e4e4d
+      @media $tPortraitMax
+        text-align center
+        font-size 18px
+        line-height 20px
       @media $desktopMax
         width calc(100% - 240px)
       @media $mLandscapeMax

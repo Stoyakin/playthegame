@@ -5,6 +5,9 @@
   &__title
     color #005eb8
     margin-bottom 69px
+    @media $tPortraitMax
+      font-size 26px
+      line-height 30px
   &__items
     display flex
     flex-wrap wrap
@@ -32,8 +35,7 @@
         width 140px
         flex-shrink 0
         height auto
-        margin-bottom 0
-        margin-right 35px
+        margin: 0 auto
         align-items flex-start
     &-img
       max-height 100%
@@ -41,6 +43,7 @@
     &-bottom
       @media $tPortraitMax
         width calc(100% - 180px)
+        text-align: center
       @media $mLandscapeMax
         width 100%
         margin-top 15px
@@ -51,8 +54,15 @@
       line-height 36px
       text-transform uppercase
       @media $tPortraitMax
-        text-align left
+        font-size 26px
+				line-height 30px
     &-text
       color $default
       font-size 27px
       line-height 32px
+      text-align: center
+
+      @media $tPortraitMax
+        text-align center
+        font-size 18px
+        line-height 20px

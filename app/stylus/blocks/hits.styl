@@ -8,6 +8,10 @@
     text-align: center
     text-transform: uppercase
 
+    @media $tPortraitMax
+      font-size 26px
+      line-height 30px
+
   &__img
     transition: .8s transform, .8s opacity
     will-change: transform
@@ -80,3 +84,5 @@
 
     &__img-cover
       margin-bottom 25px
+      max-width 70%
+      margin 0 auto

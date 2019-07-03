@@ -11,6 +11,9 @@
   &__title
     color #fff
     margin-bottom 49px
+    @media $tPortraitMax
+      font-size 26px
+      line-height 30px
   &__wrap
     position relative
     max-width 700px
@@ -34,6 +37,10 @@
       font-size 23px
       line-height 28px
       font-style italic
+      @media $tPortraitMax
+        text-align center
+        font-size 18px
+        line-height 20px
   .swiper
     &-container
       background url('../../../../static/img/bottom.png') no-repeat center bottom

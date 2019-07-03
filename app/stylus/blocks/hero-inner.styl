@@ -11,10 +11,18 @@
     text-align: center
     margin-bottom 20px
     text-transform: uppercase
+    @media $tPortraitMax
+      font-size 26px
+      line-height 30px
 
   &__text
     font-size 30px
     color: #4e4e4e
+
+    @media $tPortraitMax
+      text-align center
+      font-size 18px
+      line-height 20px
 
 @media (max-width: 1299px)
   .hero-inner
