@@ -3911,8 +3911,7 @@ body.page-loaded .footer {
   }
 }
 
-.footer__coopy,
-.footer__href {
+.footer__coopy {
   color: #4e4e4d;
   line-height: 18px;
   text-transform: uppercase;
@@ -3922,22 +3921,29 @@ body.page-loaded .footer {
 .footer__href {
   text-align: right;
   align-self: flex-end;
+}
+
+.footer__href a {
+  color: #4e4e4d;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
 
 @media (max-width: 540px) {
-  .footer__href {
+  .footer__href a {
     align-self: center;
     margin-top: 15px;
   }
 
-  .footer__href:first-child {
+  .footer__href a:first-child {
     margin-top: 0;
   }
 }
 
-.footer__href:hover {
+.footer__href a:hover {
   color: #000;
 }
 
@@ -5073,6 +5079,7 @@ body.page-loaded .footer {
 
 .reviews__item {
   padding: 58px 50px 140px;
+  min-height: 380px;
 }
 
 @media (max-width: 767px) {
