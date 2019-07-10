@@ -3766,7 +3766,7 @@ body.page-loaded .footer {
   top: 0;
   width: 100%;
   height: 224px;
-  background: url("../../static/img/pattern.png") no-repeat center;
+  background: url("../../static/img/pattern.png") center;
   z-index: -1;
 }
 
