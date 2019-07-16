@@ -4870,7 +4870,7 @@ body.page-loaded .footer {
 }
 
 .about__item-content {
-  font-size: 27px;
+  font-size: 24px;
   line-height: 32px;
   color: #4e4e4d;
 }
@@ -5007,8 +5007,8 @@ body.page-loaded .footer {
 
 .pluses__item-text {
   color: #4e4e4d;
-  font-size: 27px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 30px;
   text-align: center;
 }
 
@@ -5307,7 +5307,7 @@ body.page-loaded .footer {
 }
 
 .hero-inner__text {
-  font-size: 30px;
+  font-size: 24px;
   color: #4e4e4e;
 }
 
